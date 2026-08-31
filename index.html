@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano à Mesa — Plano Alimentar Anual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-tile" aria-hidden="true"></span>
+    <div class="brand-text">
+      <h1>Plano à Mesa</h1>
+      <p>Plano alimentar da família — 1 ano à mesa</p>
+    </div>
+  </div>
+
+  <div class="topbar-controls">
+    <label class="people-control">
+      Pessoas à mesa
+      <input type="number" id="peopleCount" min="1" max="12" value="3">
+    </label>
+    <label class="people-control">
+      Cozinhar a cada
+      <select id="batchDays">
+        <option value="1">1 dia</option>
+        <option value="2" selected>2 dias</option>
+        <option value="3">3 dias</option>
+        <option value="7">1 semana</option>
+      </select>
+    </label>
+    <div class="view-toggle" role="tablist" aria-label="Vista">
+      <button class="view-btn active" data-view="calendar" role="tab" aria-selected="true">Calendário</button>
+      <button class="view-btn" data-view="week" role="tab" aria-selected="false">Semana</button>
+    </div>
+    <button id="selectModeBtn" class="btn btn-outline">Selecionar refeições</button>
+  </div>
+</header>
+
+<nav class="month-nav">
+  <button id="prevMonth" class="nav-arrow" aria-label="Mês anterior">‹</button>
+  <div class="month-label">
+    <h2 id="monthLabel">Janeiro</h2>
+    <span id="yearLabel">2026</span>
+  </div>
+  <button id="nextMonth" class="nav-arrow" aria-label="Mês seguinte">›</button>
+  <div class="month-jump" id="monthJump"></div>
+</nav>
+
+<main>
+  <section id="calendarView" class="view-panel active">
+    <div class="weekday-row" id="weekdayRow"></div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+  </section>
+
+  <section id="weekView" class="view-panel">
+    <p class="week-hint" id="weekHint">A cozinhar de 2 em 2 dias — cada bloco de dias traz sopa, salada e prato novos.</p>
+    <div class="week-quick-actions">
+      <button id="selectWeekLunch" class="btn btn-ghost">Selecionar os 7 almoços</button>
+      <button id="selectWeekDinner" class="btn btn-ghost">Selecionar os 7 jantares</button>
+    </div>
+    <div class="week-columns" id="weekColumns"></div>
+  </section>
+</main>
+
+<div id="selectionBar" class="selection-bar hidden">
+  <span id="selectionCount">0 refeições selecionadas</span>
+  <button id="clearSelectionBtn" class="btn btn-ghost">Limpar</button>
+  <button id="generateListBtn" class="btn btn-primary">Gerar lista de compras</button>
+</div>
+
+<!-- Modal: detalhe de refeição -->
+<div id="mealModal" class="modal-backdrop hidden">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Modal: lista de compras -->
+<div id="shoppingModal" class="modal-backdrop hidden">
+  <div class="modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="shoppingTitle">
+    <button class="modal-close" id="shoppingClose" aria-label="Fechar">×</button>
+    <div id="shoppingBody"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
