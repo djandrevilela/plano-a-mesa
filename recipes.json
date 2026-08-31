@@ -1,0 +1,1251 @@
+{
+  "baseParaPessoas": 3,
+  "sopas": [
+    {
+      "id": "caldo-verde",
+      "nome": "Caldo Verde",
+      "tempo": 35,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "batata", "qtd": 3, "unidade": "un" },
+        { "nome": "couve galega", "qtd": 150, "unidade": "g" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "alho", "qtd": 1, "unidade": "dente" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" },
+        { "nome": "chouriço (opcional)", "qtd": 30, "unidade": "g" },
+        { "nome": "sal", "qtd": null, "unidade": "q.b." }
+      ],
+      "preparo": [
+        "Cozer a batata, a cebola e o alho em água com sal até desfazer.",
+        "Triturar até obter um puré cremoso.",
+        "Juntar a couve cortada finamente e deixar ferver 5 minutos.",
+        "Servir com um fio de azeite e rodelas de chouriço a gosto."
+      ]
+    },
+    {
+      "id": "sopa-legumes",
+      "nome": "Sopa de Legumes",
+      "tempo": 30,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "batata", "qtd": 2, "unidade": "un" },
+        { "nome": "cenoura", "qtd": 2, "unidade": "un" },
+        { "nome": "curgete", "qtd": 1, "unidade": "un" },
+        { "nome": "abóbora", "qtd": 150, "unidade": "g" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" },
+        { "nome": "sal", "qtd": null, "unidade": "q.b." }
+      ],
+      "preparo": [
+        "Cortar todos os legumes em pedaços pequenos.",
+        "Cozer em água temperada com sal até ficarem macios.",
+        "Triturar até obter creme homogéneo.",
+        "Retificar tempero e regar com azeite ao servir."
+      ]
+    },
+    {
+      "id": "canja-galinha",
+      "nome": "Canja de Galinha",
+      "tempo": 45,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "peito de frango", "qtd": 300, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 1, "unidade": "un" },
+        { "nome": "arroz ou massinha", "qtd": 60, "unidade": "g" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "hortelã", "qtd": 1, "unidade": "raminho" },
+        { "nome": "sal", "qtd": null, "unidade": "q.b." }
+      ],
+      "preparo": [
+        "Cozer o frango com a cebola e a cenoura em água temperada.",
+        "Retirar o frango, desfiar e reservar.",
+        "No caldo, cozer o arroz ou a massinha.",
+        "Juntar o frango desfiado e a hortelã antes de servir."
+      ]
+    },
+    {
+      "id": "sopa-feijao-verde",
+      "nome": "Sopa de Feijão Verde",
+      "tempo": 30,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "feijão verde", "qtd": 200, "unidade": "g" },
+        { "nome": "batata", "qtd": 2, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" },
+        { "nome": "sal", "qtd": null, "unidade": "q.b." }
+      ],
+      "preparo": [
+        "Cozer a batata e a cebola em água com sal.",
+        "Triturar até obter creme.",
+        "Juntar o feijão verde cortado fino e cozer mais 8 minutos.",
+        "Servir com azeite."
+      ]
+    },
+    {
+      "id": "creme-cenoura",
+      "nome": "Creme de Cenoura",
+      "tempo": 25,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "cenoura", "qtd": 5, "unidade": "un" },
+        { "nome": "batata", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "gengibre", "qtd": 1, "unidade": "colher de chá" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer a cenoura, a batata e a cebola até ficarem macias.",
+        "Triturar com o gengibre até ficar cremoso.",
+        "Ajustar sal e servir com azeite."
+      ]
+    },
+    {
+      "id": "sopa-grao-espinafres",
+      "nome": "Sopa de Grão com Espinafres",
+      "tempo": 30,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "grão-de-bico cozido", "qtd": 250, "unidade": "g" },
+        { "nome": "espinafres", "qtd": 100, "unidade": "g" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "alho", "qtd": 1, "unidade": "dente" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Refogar a cebola e o alho em azeite.",
+        "Juntar o grão e água, deixar ferver 10 minutos.",
+        "Triturar parcialmente para engrossar.",
+        "Juntar os espinafres e cozer 3 minutos."
+      ]
+    },
+    {
+      "id": "acorda-alentejana",
+      "nome": "Sopa Alentejana (Açorda)",
+      "tempo": 20,
+      "saudavel": false,
+      "ingredientes": [
+        { "nome": "pão alentejano", "qtd": 150, "unidade": "g" },
+        { "nome": "alho", "qtd": 3, "unidade": "dente" },
+        { "nome": "coentros", "qtd": 1, "unidade": "molho" },
+        { "nome": "ovo", "qtd": 3, "unidade": "un" },
+        { "nome": "azeite", "qtd": 3, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Piscar o alho e os coentros com sal e azeite.",
+        "Ferver água e escaldar a mistura de alho e coentros.",
+        "Escalfar os ovos na água.",
+        "Deitar sobre o pão cortado em fatias e servir de imediato."
+      ]
+    },
+    {
+      "id": "creme-abobora",
+      "nome": "Creme de Abóbora",
+      "tempo": 30,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "abóbora", "qtd": 500, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer a abóbora, a cenoura e a cebola em água com sal.",
+        "Triturar até ficar aveludado.",
+        "Servir com um fio de azeite."
+      ]
+    },
+    {
+      "id": "sopa-cozido-legumes",
+      "nome": "Sopa de Legumes do Cozido",
+      "tempo": 40,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "couve lombarda", "qtd": 150, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 2, "unidade": "un" },
+        { "nome": "nabo", "qtd": 1, "unidade": "un" },
+        { "nome": "batata", "qtd": 2, "unidade": "un" },
+        { "nome": "massa miúda", "qtd": 40, "unidade": "g" }
+      ],
+      "preparo": [
+        "Cozer todos os legumes em água temperada.",
+        "Retirar metade e triturar para engrossar o caldo.",
+        "Cortar o resto dos legumes em pedaços e devolver à panela.",
+        "Juntar a massa e cozer até ficar al dente."
+      ]
+    },
+    {
+      "id": "sopa-ervilhas",
+      "nome": "Sopa de Ervilhas",
+      "tempo": 25,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "ervilhas", "qtd": 300, "unidade": "g" },
+        { "nome": "batata", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "hortelã", "qtd": 1, "unidade": "raminho" }
+      ],
+      "preparo": [
+        "Cozer a batata e a cebola em água com sal.",
+        "Juntar as ervilhas e cozer mais 8 minutos.",
+        "Triturar com a hortelã até obter creme liso."
+      ]
+    },
+    {
+      "id": "creme-brocolos",
+      "nome": "Creme de Brócolos",
+      "tempo": 25,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "brócolos", "qtd": 300, "unidade": "g" },
+        { "nome": "batata", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer a batata e a cebola até amolecerem.",
+        "Juntar os brócolos e cozer 6 minutos.",
+        "Triturar tudo e servir com azeite."
+      ]
+    },
+    {
+      "id": "sopa-peixe",
+      "nome": "Sopa de Peixe",
+      "tempo": 40,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "peixe para caldo (cherne/pescada)", "qtd": 400, "unidade": "g" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "batata", "qtd": 2, "unidade": "un" },
+        { "nome": "arroz", "qtd": 50, "unidade": "g" }
+      ],
+      "preparo": [
+        "Refogar a cebola e o tomate em azeite.",
+        "Juntar água, o peixe e a batata; cozer 20 minutos.",
+        "Desfiar o peixe e retirar espinhas.",
+        "Juntar o arroz e cozer até ficar pronto."
+      ]
+    },
+    {
+      "id": "sopa-tomate",
+      "nome": "Sopa de Tomate",
+      "tempo": 25,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "tomate maduro", "qtd": 6, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "pão", "qtd": 60, "unidade": "g" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Refogar a cebola em azeite, juntar o tomate picado.",
+        "Deixar apurar 10 minutos e adicionar água.",
+        "Triturar e voltar ao lume com o pão às pedacinhos até engrossar."
+      ]
+    },
+    {
+      "id": "creme-curgete",
+      "nome": "Creme de Curgete",
+      "tempo": 25,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "curgete", "qtd": 3, "unidade": "un" },
+        { "nome": "batata", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "queijo fresco (opcional)", "qtd": 30, "unidade": "g" }
+      ],
+      "preparo": [
+        "Cozer a curgete, a batata e a cebola em água com sal.",
+        "Triturar até ficar cremoso.",
+        "Servir com um pouco de queijo fresco desfeito por cima."
+      ]
+    },
+    {
+      "id": "sopa-nabicas",
+      "nome": "Sopa de Nabiças",
+      "tempo": 30,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "nabiças", "qtd": 200, "unidade": "g" },
+        { "nome": "batata", "qtd": 3, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer a batata e a cebola em água com sal até desfazer.",
+        "Triturar até obter um puré cremoso.",
+        "Juntar as nabiças cortadas finamente e cozer 5 minutos.",
+        "Servir com um fio de azeite."
+      ]
+    },
+    {
+      "id": "creme-milho",
+      "nome": "Creme de Milho",
+      "tempo": 25,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "milho", "qtd": 300, "unidade": "g" },
+        { "nome": "batata", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer a batata e a cebola em água com sal.",
+        "Juntar o milho e cozer mais 5 minutos.",
+        "Triturar até ficar cremoso e servir com azeite."
+      ]
+    },
+    {
+      "id": "sopa-lentilhas",
+      "nome": "Sopa de Lentilhas",
+      "tempo": 35,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "lentilhas", "qtd": 200, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 2, "unidade": "un" },
+        { "nome": "tomate", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "alho", "qtd": 1, "unidade": "dente" }
+      ],
+      "preparo": [
+        "Refogar a cebola, o alho e o tomate em azeite.",
+        "Juntar as lentilhas, a cenoura e água; cozer 20 minutos.",
+        "Triturar parcialmente para engrossar e retificar tempero."
+      ]
+    },
+    {
+      "id": "creme-espargos",
+      "nome": "Creme de Espargos",
+      "tempo": 25,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "espargos verdes", "qtd": 250, "unidade": "g" },
+        { "nome": "batata", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer a batata e a cebola até amolecerem.",
+        "Juntar os espargos cortados e cozer 6 minutos.",
+        "Triturar tudo e servir com azeite."
+      ]
+    },
+    {
+      "id": "sopa-repolho-feijao",
+      "nome": "Sopa de Repolho e Feijão",
+      "tempo": 35,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "repolho", "qtd": 200, "unidade": "g" },
+        { "nome": "feijão branco cozido", "qtd": 200, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" }
+      ],
+      "preparo": [
+        "Refogar a cebola e a cenoura em azeite.",
+        "Juntar o feijão e água, deixar ferver 10 minutos.",
+        "Triturar parcialmente e juntar o repolho picado; cozer mais 6 minutos."
+      ]
+    },
+    {
+      "id": "creme-batata-doce",
+      "nome": "Creme de Batata-Doce",
+      "tempo": 30,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "batata-doce", "qtd": 3, "unidade": "un" },
+        { "nome": "cenoura", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "noz-moscada", "qtd": null, "unidade": "q.b." }
+      ],
+      "preparo": [
+        "Cozer a batata-doce, a cenoura e a cebola em água com sal.",
+        "Triturar até ficar aveludado.",
+        "Temperar com noz-moscada e servir."
+      ]
+    }
+  ],
+  "saladas": [
+    {
+      "id": "salada-tomate-cebola",
+      "nome": "Salada de Tomate e Cebola",
+      "tempo": 10,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "tomate", "qtd": 3, "unidade": "un" },
+        { "nome": "cebola roxa", "qtd": 0.5, "unidade": "un" },
+        { "nome": "orégãos", "qtd": null, "unidade": "q.b." },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" },
+        { "nome": "vinagre", "qtd": 1, "unidade": "colher de chá" }
+      ],
+      "preparo": [
+        "Cortar o tomate em rodelas e a cebola em meias-luas finas.",
+        "Temperar com azeite, vinagre, sal e orégãos."
+      ]
+    },
+    {
+      "id": "salada-verde-mista",
+      "nome": "Salada Verde Mista",
+      "tempo": 10,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "alface", "qtd": 1, "unidade": "un" },
+        { "nome": "pepino", "qtd": 1, "unidade": "un" },
+        { "nome": "cenoura ralada", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" },
+        { "nome": "limão", "qtd": 0.5, "unidade": "un" }
+      ],
+      "preparo": [
+        "Lavar e cortar a alface e o pepino.",
+        "Juntar a cenoura ralada.",
+        "Temperar com azeite, sumo de limão e sal."
+      ]
+    },
+    {
+      "id": "salada-pepino-iogurte",
+      "nome": "Salada de Pepino e Iogurte",
+      "tempo": 10,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "pepino", "qtd": 2, "unidade": "un" },
+        { "nome": "iogurte natural", "qtd": 1, "unidade": "un" },
+        { "nome": "hortelã", "qtd": 1, "unidade": "raminho" },
+        { "nome": "alho", "qtd": 0.5, "unidade": "dente" }
+      ],
+      "preparo": [
+        "Ralar o pepino e escorrer o excesso de água.",
+        "Misturar com o iogurte, alho picado e hortelã.",
+        "Temperar com sal e servir fresco."
+      ]
+    },
+    {
+      "id": "salada-grao",
+      "nome": "Salada de Grão-de-Bico",
+      "tempo": 15,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "grão-de-bico cozido", "qtd": 300, "unidade": "g" },
+        { "nome": "tomate", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 0.5, "unidade": "un" },
+        { "nome": "salsa", "qtd": 1, "unidade": "raminho" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Misturar o grão com o tomate e a cebola picados.",
+        "Juntar a salsa picada.",
+        "Temperar com azeite, sal e vinagre a gosto."
+      ]
+    },
+    {
+      "id": "salada-feijao-frade",
+      "nome": "Salada de Feijão Frade",
+      "tempo": 15,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "feijão frade cozido", "qtd": 300, "unidade": "g" },
+        { "nome": "ovo cozido", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 0.5, "unidade": "un" },
+        { "nome": "salsa", "qtd": 1, "unidade": "raminho" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Misturar o feijão frade com a cebola picada.",
+        "Juntar o ovo cozido picado e a salsa.",
+        "Temperar com azeite, vinagre e sal."
+      ]
+    },
+    {
+      "id": "salada-repolho",
+      "nome": "Salada de Repolho Leve",
+      "tempo": 15,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "repolho", "qtd": 0.5, "unidade": "un" },
+        { "nome": "cenoura", "qtd": 1, "unidade": "un" },
+        { "nome": "iogurte natural", "qtd": 1, "unidade": "un" },
+        { "nome": "mostarda", "qtd": 1, "unidade": "colher de chá" }
+      ],
+      "preparo": [
+        "Cortar o repolho e a cenoura em tiras finas.",
+        "Misturar o iogurte com a mostarda, sal e um fio de azeite.",
+        "Envolver tudo e deixar repousar 10 minutos."
+      ]
+    },
+    {
+      "id": "salada-beterraba",
+      "nome": "Salada de Beterraba",
+      "tempo": 10,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "beterraba cozida", "qtd": 300, "unidade": "g" },
+        { "nome": "cebola roxa", "qtd": 0.5, "unidade": "un" },
+        { "nome": "vinagre", "qtd": 1, "unidade": "colher de sopa" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cortar a beterraba em cubos ou rodelas.",
+        "Juntar a cebola em meias-luas finas.",
+        "Temperar com azeite, vinagre e sal."
+      ]
+    },
+    {
+      "id": "salada-cenoura-ralada",
+      "nome": "Salada de Cenoura Ralada",
+      "tempo": 10,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "cenoura", "qtd": 4, "unidade": "un" },
+        { "nome": "passas", "qtd": 30, "unidade": "g" },
+        { "nome": "limão", "qtd": 0.5, "unidade": "un" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Ralar a cenoura grosseiramente.",
+        "Juntar as passas.",
+        "Temperar com sumo de limão, azeite e sal."
+      ]
+    },
+    {
+      "id": "salada-russa-light",
+      "nome": "Salada Russa Light",
+      "tempo": 20,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "batata", "qtd": 2, "unidade": "un" },
+        { "nome": "cenoura", "qtd": 2, "unidade": "un" },
+        { "nome": "ervilhas", "qtd": 100, "unidade": "g" },
+        { "nome": "iogurte natural", "qtd": 1, "unidade": "un" },
+        { "nome": "mostarda", "qtd": 1, "unidade": "colher de chá" }
+      ],
+      "preparo": [
+        "Cozer a batata, a cenoura e as ervilhas em cubos pequenos.",
+        "Deixar arrefecer completamente.",
+        "Envolver com iogurte, mostarda e sal em vez de maionese."
+      ]
+    },
+    {
+      "id": "salada-alface-milho-tomate",
+      "nome": "Salada de Alface, Milho e Tomate",
+      "tempo": 10,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "alface", "qtd": 1, "unidade": "un" },
+        { "nome": "milho cozido", "qtd": 150, "unidade": "g" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cortar a alface e o tomate.",
+        "Juntar o milho escorrido.",
+        "Temperar com azeite, sal e vinagre a gosto."
+      ]
+    },
+    {
+      "id": "salada-quinoa-legumes",
+      "nome": "Salada de Quinoa com Legumes",
+      "tempo": 20,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "quinoa", "qtd": 150, "unidade": "g" },
+        { "nome": "pepino", "qtd": 1, "unidade": "un" },
+        { "nome": "tomate", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola roxa", "qtd": 0.5, "unidade": "un" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer a quinoa conforme a embalagem e deixar arrefecer.",
+        "Cortar o pepino, o tomate e a cebola em cubos pequenos.",
+        "Envolver tudo e temperar com azeite, sal e limão a gosto."
+      ]
+    },
+    {
+      "id": "salada-grega-light",
+      "nome": "Salada Grega Light",
+      "tempo": 10,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "pepino", "qtd": 1, "unidade": "un" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "pimento verde", "qtd": 1, "unidade": "un" },
+        { "nome": "queijo feta", "qtd": 60, "unidade": "g" },
+        { "nome": "azeitona preta", "qtd": 8, "unidade": "un" }
+      ],
+      "preparo": [
+        "Cortar o pepino, o tomate e o pimento em pedaços grandes.",
+        "Juntar as azeitonas e o feta em cubos.",
+        "Temperar com azeite, orégãos e sal."
+      ]
+    },
+    {
+      "id": "salada-lentilhas",
+      "nome": "Salada de Lentilhas",
+      "tempo": 15,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "lentilhas cozidas", "qtd": 300, "unidade": "g" },
+        { "nome": "tomate", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 0.5, "unidade": "un" },
+        { "nome": "salsa", "qtd": 1, "unidade": "raminho" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Misturar as lentilhas com o tomate e a cebola picados.",
+        "Juntar a salsa picada.",
+        "Temperar com azeite, vinagre e sal."
+      ]
+    },
+    {
+      "id": "salada-caprese-simples",
+      "nome": "Salada Caprese Simples",
+      "tempo": 10,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "tomate", "qtd": 4, "unidade": "un" },
+        { "nome": "mozzarella light", "qtd": 150, "unidade": "g" },
+        { "nome": "manjericão", "qtd": 1, "unidade": "raminho" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cortar o tomate e a mozzarella em rodelas.",
+        "Alternar num prato e decorar com folhas de manjericão.",
+        "Regar com azeite e uma pitada de sal."
+      ]
+    },
+    {
+      "id": "salada-curgete-crua-hortela",
+      "nome": "Salada de Curgete Crua com Hortelã",
+      "tempo": 10,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "curgete", "qtd": 2, "unidade": "un" },
+        { "nome": "hortelã", "qtd": 1, "unidade": "raminho" },
+        { "nome": "limão", "qtd": 0.5, "unidade": "un" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cortar a curgete em fitas finas com um descascador.",
+        "Temperar com sumo de limão, azeite e sal.",
+        "Finalizar com hortelã picada."
+      ]
+    },
+    {
+      "id": "salada-tabbouleh-simples",
+      "nome": "Tabbouleh Simples",
+      "tempo": 20,
+      "saudavel": true,
+      "ingredientes": [
+        { "nome": "cuscuz ou bulgur", "qtd": 150, "unidade": "g" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "salsa", "qtd": 1, "unidade": "molho" },
+        { "nome": "hortelã", "qtd": 1, "unidade": "raminho" },
+        { "nome": "limão", "qtd": 1, "unidade": "un" }
+      ],
+      "preparo": [
+        "Hidratar o cuscuz com água quente conforme a embalagem.",
+        "Picar finamente o tomate, a salsa e a hortelã.",
+        "Envolver tudo com sumo de limão, azeite e sal."
+      ]
+    }
+  ],
+  "pratos": [
+    {
+      "id": "bacalhau-bras",
+      "nome": "Bacalhau à Brás",
+      "tempo": 40,
+      "saudavel": false,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "bacalhau demolhado", "qtd": 400, "unidade": "g" },
+        { "nome": "batata palha", "qtd": 300, "unidade": "g" },
+        { "nome": "ovo", "qtd": 5, "unidade": "un" },
+        { "nome": "cebola", "qtd": 2, "unidade": "un" },
+        { "nome": "azeitona preta", "qtd": 12, "unidade": "un" },
+        { "nome": "azeite", "qtd": 3, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer e desfiar o bacalhau.",
+        "Refogar a cebola em azeite até dourar.",
+        "Juntar o bacalhau e a batata palha, envolver.",
+        "Adicionar os ovos batidos e mexer até cremoso. Decorar com azeitonas e salsa."
+      ]
+    },
+    {
+      "id": "frango-grelhado-legumes",
+      "nome": "Frango Grelhado com Legumes Assados",
+      "tempo": 35,
+      "saudavel": true,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "peito de frango", "qtd": 450, "unidade": "g" },
+        { "nome": "curgete", "qtd": 1, "unidade": "un" },
+        { "nome": "pimento", "qtd": 1, "unidade": "un" },
+        { "nome": "batata-doce", "qtd": 2, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" },
+        { "nome": "alho", "qtd": 2, "unidade": "dente" }
+      ],
+      "preparo": [
+        "Temperar o frango com alho, sal e azeite.",
+        "Cortar os legumes e regar com azeite.",
+        "Levar tudo ao forno a 200°C por 25 minutos, virando a meio.",
+        "Grelhar o frango na frigideira se preferir mais estaladiço."
+      ]
+    },
+    {
+      "id": "bife-grelhado-salada",
+      "nome": "Bife Grelhado com Salada",
+      "tempo": 20,
+      "saudavel": true,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "bife de vaca", "qtd": 450, "unidade": "g" },
+        { "nome": "alho", "qtd": 2, "unidade": "dente" },
+        { "nome": "batata cozida", "qtd": 4, "unidade": "un" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Temperar o bife com alho picado, sal e pimenta.",
+        "Grelhar em frigideira bem quente 2-3 minutos de cada lado.",
+        "Servir com batata cozida e um fio de azeite."
+      ]
+    },
+    {
+      "id": "salmao-batata-doce",
+      "nome": "Salmão Assado com Batata-Doce",
+      "tempo": 30,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "lombo de salmão", "qtd": 450, "unidade": "g" },
+        { "nome": "batata-doce", "qtd": 3, "unidade": "un" },
+        { "nome": "limão", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" },
+        { "nome": "endro", "qtd": 1, "unidade": "raminho" }
+      ],
+      "preparo": [
+        "Cortar a batata-doce em fatias e assar 15 minutos a 200°C.",
+        "Juntar o salmão temperado com limão, sal e endro.",
+        "Assar mais 12-15 minutos até o peixe estar cozinhado."
+      ]
+    },
+    {
+      "id": "arroz-tomate-peixe",
+      "nome": "Arroz de Tomate com Peixe",
+      "tempo": 35,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "filetes de pescada", "qtd": 400, "unidade": "g" },
+        { "nome": "arroz", "qtd": 200, "unidade": "g" },
+        { "nome": "tomate maduro", "qtd": 4, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Refogar a cebola em azeite e juntar o tomate picado.",
+        "Adicionar água e o arroz, cozinhar 12 minutos.",
+        "Colocar o peixe por cima nos últimos 6 minutos a cozinhar em lume brando."
+      ]
+    },
+    {
+      "id": "jardineira-vitela",
+      "nome": "Jardineira de Vitela",
+      "tempo": 60,
+      "saudavel": false,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "carne de vitela para estufar", "qtd": 450, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 3, "unidade": "un" },
+        { "nome": "batata", "qtd": 3, "unidade": "un" },
+        { "nome": "ervilhas", "qtd": 150, "unidade": "g" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" }
+      ],
+      "preparo": [
+        "Alourar a carne em azeite com a cebola.",
+        "Juntar o tomate, tapar com água e deixar estufar 30 minutos.",
+        "Adicionar a cenoura e a batata, cozinhar mais 20 minutos.",
+        "Juntar as ervilhas nos últimos 8 minutos."
+      ]
+    },
+    {
+      "id": "lulas-grelhadas-arroz-coentros",
+      "nome": "Lulas Grelhadas com Arroz de Coentros",
+      "tempo": 30,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "lulas limpas", "qtd": 450, "unidade": "g" },
+        { "nome": "arroz", "qtd": 200, "unidade": "g" },
+        { "nome": "coentros", "qtd": 1, "unidade": "molho" },
+        { "nome": "alho", "qtd": 2, "unidade": "dente" },
+        { "nome": "limão", "qtd": 1, "unidade": "un" }
+      ],
+      "preparo": [
+        "Cozer o arroz e envolver com coentros picados no fim.",
+        "Temperar as lulas com alho, sal e limão.",
+        "Grelhar as lulas 2-3 minutos de cada lado em lume forte."
+      ]
+    },
+    {
+      "id": "dourada-forno-batata-murro",
+      "nome": "Dourada no Forno com Batata a Murro",
+      "tempo": 45,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "dourada", "qtd": 2, "unidade": "un" },
+        { "nome": "batata pequena", "qtd": 12, "unidade": "un" },
+        { "nome": "alho", "qtd": 3, "unidade": "dente" },
+        { "nome": "azeite", "qtd": 3, "unidade": "colher de sopa" },
+        { "nome": "louro", "qtd": 2, "unidade": "folha" }
+      ],
+      "preparo": [
+        "Cozer as batatas com pele até ficarem macias.",
+        "Esmagar ligeiramente e regar com azeite e alho.",
+        "Assar a dourada temperada junto com as batatas 20 minutos a 200°C."
+      ]
+    },
+    {
+      "id": "empadao-pescada",
+      "nome": "Empadão de Peixe (Pescada)",
+      "tempo": 50,
+      "saudavel": false,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "filetes de pescada", "qtd": 400, "unidade": "g" },
+        { "nome": "batata", "qtd": 6, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "leite", "qtd": 100, "unidade": "ml" },
+        { "nome": "queijo ralado", "qtd": 50, "unidade": "g" }
+      ],
+      "preparo": [
+        "Cozer e desfiar o peixe; cozer e fazer puré com as batatas e o leite.",
+        "Refogar a cebola e juntar ao peixe desfiado.",
+        "Numa travessa, alternar camadas de puré e recheio de peixe.",
+        "Polvilhar com queijo e gratinar no forno 15 minutos."
+      ]
+    },
+    {
+      "id": "peru-estufado-legumes",
+      "nome": "Peru Estufado com Legumes",
+      "tempo": 45,
+      "saudavel": true,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "peito de peru em cubos", "qtd": 450, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 2, "unidade": "un" },
+        { "nome": "curgete", "qtd": 1, "unidade": "un" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" }
+      ],
+      "preparo": [
+        "Alourar o peru com a cebola em azeite.",
+        "Juntar o tomate picado e um pouco de água, tapar e estufar 15 minutos.",
+        "Adicionar a cenoura e a curgete, cozinhar até tudo ficar macio."
+      ]
+    },
+    {
+      "id": "feijoada-legumes",
+      "nome": "Feijoada de Legumes",
+      "tempo": 40,
+      "saudavel": true,
+      "proteina": "vegetariano",
+      "ingredientes": [
+        { "nome": "feijão vermelho cozido", "qtd": 400, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 2, "unidade": "un" },
+        { "nome": "curgete", "qtd": 1, "unidade": "un" },
+        { "nome": "couve", "qtd": 150, "unidade": "g" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" }
+      ],
+      "preparo": [
+        "Refogar a cebola e o tomate em azeite.",
+        "Juntar a cenoura e cozinhar 5 minutos.",
+        "Adicionar o feijão, a curgete e um pouco de água; cozinhar 15 minutos.",
+        "Juntar a couve nos últimos 5 minutos."
+      ]
+    },
+    {
+      "id": "rojoes-leves-lombo-assado",
+      "nome": "Rojões Leves (Lombo Assado)",
+      "tempo": 50,
+      "saudavel": false,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "lombo de porco", "qtd": 450, "unidade": "g" },
+        { "nome": "alho", "qtd": 3, "unidade": "dente" },
+        { "nome": "louro", "qtd": 2, "unidade": "folha" },
+        { "nome": "batata", "qtd": 4, "unidade": "un" },
+        { "nome": "vinho branco", "qtd": 50, "unidade": "ml" }
+      ],
+      "preparo": [
+        "Marinar o lombo em alho, louro, vinho branco e sal por 20 minutos.",
+        "Assar em forno a 200°C com as batatas cortadas ao meio, 35-40 minutos.",
+        "Cortar em fatias e servir com o molho da assadeira."
+      ]
+    },
+    {
+      "id": "salada-atum-grao",
+      "nome": "Salada de Atum com Grão",
+      "tempo": 15,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "atum em água", "qtd": 300, "unidade": "g" },
+        { "nome": "grão-de-bico cozido", "qtd": 300, "unidade": "g" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "cebola roxa", "qtd": 0.5, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Escorrer o atum e desfazer com um garfo.",
+        "Misturar com o grão, o tomate e a cebola picados.",
+        "Temperar com azeite, sal e vinagre a gosto."
+      ]
+    },
+    {
+      "id": "salada-frango-quinoa",
+      "nome": "Salada de Frango com Quinoa",
+      "tempo": 25,
+      "saudavel": true,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "peito de frango cozido/grelhado", "qtd": 350, "unidade": "g" },
+        { "nome": "quinoa", "qtd": 150, "unidade": "g" },
+        { "nome": "pepino", "qtd": 1, "unidade": "un" },
+        { "nome": "tomate cherry", "qtd": 150, "unidade": "g" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" },
+        { "nome": "limão", "qtd": 0.5, "unidade": "un" }
+      ],
+      "preparo": [
+        "Cozer a quinoa conforme as instruções da embalagem.",
+        "Cortar o frango, o pepino e o tomate cherry.",
+        "Misturar tudo e temperar com azeite, limão e sal."
+      ]
+    },
+    {
+      "id": "massa-integral-legumes-frango",
+      "nome": "Massa Integral com Legumes e Frango",
+      "tempo": 25,
+      "saudavel": true,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "massa integral", "qtd": 250, "unidade": "g" },
+        { "nome": "peito de frango", "qtd": 300, "unidade": "g" },
+        { "nome": "brócolos", "qtd": 200, "unidade": "g" },
+        { "nome": "tomate cherry", "qtd": 150, "unidade": "g" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" },
+        { "nome": "alho", "qtd": 2, "unidade": "dente" }
+      ],
+      "preparo": [
+        "Cozer a massa e os brócolos juntos até ambos ficarem al dente.",
+        "Grelhar o frango em cubos com alho e azeite.",
+        "Envolver tudo com o tomate cherry e um fio de azeite."
+      ]
+    },
+    {
+      "id": "omelete-legumes",
+      "nome": "Omelete de Legumes",
+      "tempo": 20,
+      "saudavel": true,
+      "proteina": "vegetariano",
+      "ingredientes": [
+        { "nome": "ovo", "qtd": 6, "unidade": "un" },
+        { "nome": "curgete", "qtd": 1, "unidade": "un" },
+        { "nome": "pimento", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 0.5, "unidade": "un" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Saltear os legumes picados em azeite até macios.",
+        "Bater os ovos com sal e juntar aos legumes na frigideira.",
+        "Cozinhar em lume brando dos dois lados até solidificar."
+      ]
+    },
+    {
+      "id": "costeletas-porco-pure",
+      "nome": "Costeletas de Porco Grelhadas com Puré",
+      "tempo": 30,
+      "saudavel": false,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "costeletas de porco", "qtd": 450, "unidade": "g" },
+        { "nome": "batata", "qtd": 5, "unidade": "un" },
+        { "nome": "leite", "qtd": 100, "unidade": "ml" },
+        { "nome": "alho", "qtd": 2, "unidade": "dente" }
+      ],
+      "preparo": [
+        "Temperar as costeletas com alho e sal, grelhar 4-5 minutos de cada lado.",
+        "Cozer as batatas e fazer puré com leite e um pouco de azeite.",
+        "Servir juntos."
+      ]
+    },
+    {
+      "id": "arroz-pato-leve",
+      "nome": "Arroz de Pato Leve",
+      "tempo": 60,
+      "saudavel": false,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "peito de pato", "qtd": 400, "unidade": "g" },
+        { "nome": "arroz", "qtd": 250, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 1, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "chouriço (opcional)", "qtd": 30, "unidade": "g" }
+      ],
+      "preparo": [
+        "Cozer o pato com a cenoura e a cebola até ficar macio; desfiar.",
+        "No caldo da cozedura, cozinhar o arroz.",
+        "Envolver o pato desfiado no arroz e levar ao forno 10 minutos a gratinar."
+      ]
+    },
+    {
+      "id": "peixe-grelhado-vapor",
+      "nome": "Peixe Grelhado com Legumes no Vapor",
+      "tempo": 25,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "filetes de peixe branco", "qtd": 450, "unidade": "g" },
+        { "nome": "brócolos", "qtd": 200, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 2, "unidade": "un" },
+        { "nome": "limão", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer os legumes no vapor até ficarem macios mas firmes.",
+        "Grelhar o peixe temperado com limão e sal.",
+        "Servir com um fio de azeite por cima."
+      ]
+    },
+    {
+      "id": "espetadas-frango-pimentos",
+      "nome": "Espetadas de Frango com Pimentos",
+      "tempo": 30,
+      "saudavel": true,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "peito de frango", "qtd": 450, "unidade": "g" },
+        { "nome": "pimento", "qtd": 2, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "alho", "qtd": 2, "unidade": "dente" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cortar o frango e os legumes em pedaços e temperar com alho e azeite.",
+        "Montar em espetos alternando frango e legumes.",
+        "Grelhar 12-15 minutos, virando regularmente."
+      ]
+    },
+    {
+      "id": "bacalhau-grao",
+      "nome": "Bacalhau com Grão",
+      "tempo": 35,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "bacalhau demolhado", "qtd": 400, "unidade": "g" },
+        { "nome": "grão-de-bico cozido", "qtd": 300, "unidade": "g" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "ovo cozido", "qtd": 2, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer o bacalhau em água por 10 minutos.",
+        "Aquecer o grão com a cebola cortada e um fio de azeite.",
+        "Servir o bacalhau sobre o grão com rodelas de ovo cozido."
+      ]
+    },
+    {
+      "id": "carne-vaca-estufada-legumes",
+      "nome": "Carne de Vaca Estufada com Legumes",
+      "tempo": 70,
+      "saudavel": false,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "carne de vaca para estufar", "qtd": 450, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 3, "unidade": "un" },
+        { "nome": "batata", "qtd": 3, "unidade": "un" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "vinho tinto", "qtd": 50, "unidade": "ml" }
+      ],
+      "preparo": [
+        "Alourar a carne com a cebola em azeite.",
+        "Juntar o tomate e o vinho, deixar reduzir.",
+        "Adicionar água até cobrir e estufar em lume brando 40 minutos.",
+        "Juntar a cenoura e a batata, cozinhar até tudo ficar macio."
+      ]
+    },
+    {
+      "id": "frango-estufado-cogumelos",
+      "nome": "Frango Estufado com Cogumelos",
+      "tempo": 40,
+      "saudavel": true,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "peito de frango", "qtd": 450, "unidade": "g" },
+        { "nome": "cogumelos", "qtd": 250, "unidade": "g" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "alho", "qtd": 2, "unidade": "dente" },
+        { "nome": "vinho branco", "qtd": 50, "unidade": "ml" }
+      ],
+      "preparo": [
+        "Alourar o frango em cubos com a cebola e o alho.",
+        "Juntar os cogumelos fatiados e o vinho branco.",
+        "Tapar e deixar estufar 15-20 minutos até o frango estar cozinhado."
+      ]
+    },
+    {
+      "id": "polvo-lagareiro-simples",
+      "nome": "Polvo à Lagareiro Simplificado",
+      "tempo": 55,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "polvo cozido", "qtd": 500, "unidade": "g" },
+        { "nome": "batata pequena", "qtd": 10, "unidade": "un" },
+        { "nome": "alho", "qtd": 3, "unidade": "dente" },
+        { "nome": "azeite", "qtd": 3, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Cozer as batatas com pele até macias.",
+        "Colocar o polvo e as batatas num tabuleiro, regar com azeite e alho picado.",
+        "Levar ao forno a 200°C por 15-20 minutos até dourar."
+      ]
+    },
+    {
+      "id": "robalo-grelhado-legumes",
+      "nome": "Robalo Grelhado com Legumes",
+      "tempo": 30,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "filetes de robalo", "qtd": 450, "unidade": "g" },
+        { "nome": "curgete", "qtd": 1, "unidade": "un" },
+        { "nome": "pimento", "qtd": 1, "unidade": "un" },
+        { "nome": "limão", "qtd": 1, "unidade": "un" },
+        { "nome": "azeite", "qtd": 1, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Grelhar os legumes cortados em fatias.",
+        "Temperar o robalo com sal e limão e grelhar 3-4 minutos de cada lado.",
+        "Servir com os legumes grelhados e um fio de azeite."
+      ]
+    },
+    {
+      "id": "almondegas-peru-forno",
+      "nome": "Almôndegas de Peru ao Forno",
+      "tempo": 35,
+      "saudavel": true,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "peru picado", "qtd": 450, "unidade": "g" },
+        { "nome": "ovo", "qtd": 1, "unidade": "un" },
+        { "nome": "pão ralado", "qtd": 40, "unidade": "g" },
+        { "nome": "alho", "qtd": 1, "unidade": "dente" },
+        { "nome": "salsa", "qtd": 1, "unidade": "raminho" }
+      ],
+      "preparo": [
+        "Misturar o peru picado com ovo, pão ralado, alho e salsa.",
+        "Moldar em almôndegas pequenas.",
+        "Levar ao forno a 200°C por 18-20 minutos até douradas."
+      ]
+    },
+    {
+      "id": "douradinhos-pescada-assados",
+      "nome": "Douradinhos de Pescada Caseiros (Assados)",
+      "tempo": 35,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "filetes de pescada", "qtd": 450, "unidade": "g" },
+        { "nome": "pão ralado", "qtd": 60, "unidade": "g" },
+        { "nome": "ovo", "qtd": 2, "unidade": "un" },
+        { "nome": "limão", "qtd": 1, "unidade": "un" }
+      ],
+      "preparo": [
+        "Cortar a pescada em tiras e passar por ovo batido e depois por pão ralado.",
+        "Colocar num tabuleiro com um fio de azeite.",
+        "Assar a 200°C por 15-18 minutos, virando a meio. Servir com limão."
+      ]
+    },
+    {
+      "id": "carapaus-assados-salada-tomate",
+      "nome": "Carapaus Assados com Salada de Tomate",
+      "tempo": 30,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "carapaus limpos", "qtd": 6, "unidade": "un" },
+        { "nome": "tomate", "qtd": 3, "unidade": "un" },
+        { "nome": "cebola", "qtd": 0.5, "unidade": "un" },
+        { "nome": "azeite", "qtd": 2, "unidade": "colher de sopa" }
+      ],
+      "preparo": [
+        "Temperar os carapaus com sal e assar a 200°C por 15 minutos.",
+        "Cortar o tomate e a cebola em rodelas finas.",
+        "Servir os carapaus com a salada de tomate ao lado e um fio de azeite."
+      ]
+    },
+    {
+      "id": "caril-grao-legumes",
+      "nome": "Caril de Grão e Legumes",
+      "tempo": 30,
+      "saudavel": true,
+      "proteina": "vegetariano",
+      "ingredientes": [
+        { "nome": "grão-de-bico cozido", "qtd": 400, "unidade": "g" },
+        { "nome": "curgete", "qtd": 1, "unidade": "un" },
+        { "nome": "cenoura", "qtd": 1, "unidade": "un" },
+        { "nome": "leite de coco", "qtd": 200, "unidade": "ml" },
+        { "nome": "caril em pó", "qtd": 1, "unidade": "colher de sopa" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" }
+      ],
+      "preparo": [
+        "Refogar a cebola com o caril em pó.",
+        "Juntar a cenoura e a curgete, saltear 3 minutos.",
+        "Adicionar o grão e o leite de coco; cozinhar 12-15 minutos em lume brando."
+      ]
+    },
+    {
+      "id": "feijoada-marisco-leve",
+      "nome": "Feijoada de Marisco Leve",
+      "tempo": 40,
+      "saudavel": true,
+      "proteina": "peixe",
+      "ingredientes": [
+        { "nome": "miolo de marisco (camarão/amêijoa)", "qtd": 350, "unidade": "g" },
+        { "nome": "feijão branco cozido", "qtd": 350, "unidade": "g" },
+        { "nome": "tomate", "qtd": 2, "unidade": "un" },
+        { "nome": "cebola", "qtd": 1, "unidade": "un" },
+        { "nome": "coentros", "qtd": 1, "unidade": "raminho" }
+      ],
+      "preparo": [
+        "Refogar a cebola e o tomate picado em azeite.",
+        "Juntar o feijão e um pouco de água, deixar apurar 10 minutos.",
+        "Adicionar o marisco nos últimos 5 minutos e finalizar com coentros."
+      ]
+    },
+    {
+      "id": "perna-frango-assada-arroz-legumes",
+      "nome": "Perna de Frango Assada com Arroz de Legumes",
+      "tempo": 50,
+      "saudavel": true,
+      "proteina": "carne",
+      "ingredientes": [
+        { "nome": "pernas de frango", "qtd": 6, "unidade": "un" },
+        { "nome": "arroz", "qtd": 200, "unidade": "g" },
+        { "nome": "cenoura", "qtd": 1, "unidade": "un" },
+        { "nome": "ervilhas", "qtd": 100, "unidade": "g" },
+        { "nome": "alho", "qtd": 2, "unidade": "dente" }
+      ],
+      "preparo": [
+        "Temperar as pernas de frango com alho e sal e assar a 200°C por 35 minutos.",
+        "Cozer o arroz com a cenoura e as ervilhas.",
+        "Servir o frango assado sobre o arroz de legumes."
+      ]
+    }
+  ]
+}
