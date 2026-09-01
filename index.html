@@ -2,8 +2,19 @@
 <html lang="pt-PT">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Plano à Mesa — Plano Alimentar Anual</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#16455E">
+<link rel="icon" href="icons/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Plano à Mesa">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,6 +50,8 @@
       <button class="view-btn" data-view="week" role="tab" aria-selected="false">Semana</button>
     </div>
     <button id="selectModeBtn" class="btn btn-outline">Selecionar refeições</button>
+    <button id="dietBtn" class="btn btn-outline">Dieta e restrições</button>
+    <button id="installBtn" class="btn btn-primary hidden">Instalar app</button>
   </div>
 </header>
 
@@ -87,6 +100,48 @@
   <div class="modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="shoppingTitle">
     <button class="modal-close" id="shoppingClose" aria-label="Fechar">×</button>
     <div id="shoppingBody"></div>
+  </div>
+</div>
+
+<!-- Modal: dieta e restrições -->
+<div id="dietModal" class="modal-backdrop hidden">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="dietTitle">
+    <button class="modal-close" id="dietClose" aria-label="Fechar">×</button>
+    <div id="dietBody">
+      <p class="section-title" style="margin-top:0;">Dieta e restrições</p>
+      <p class="modal-subtext">As refeições do plano ajustam-se automaticamente. Se uma combinação não tiver receitas suficientes, mostramos a melhor alternativa disponível.</p>
+
+      <p class="filter-group-label">Regime alimentar</p>
+      <label class="filter-check"><input type="checkbox" id="filterVegetarian"> Vegetariano</label>
+      <label class="filter-check"><input type="checkbox" id="filterSemGluten"> Sem glúten</label>
+      <label class="filter-check"><input type="checkbox" id="filterSemLactose"> Sem lactose</label>
+
+      <p class="filter-group-label">Alergias / evitar</p>
+      <label class="filter-check"><input type="checkbox" data-allergen="ovo"> Ovo</label>
+      <label class="filter-check"><input type="checkbox" data-allergen="peixe"> Peixe</label>
+      <label class="filter-check"><input type="checkbox" data-allergen="marisco"> Marisco</label>
+      <label class="filter-check"><input type="checkbox" data-allergen="frutos-secos"> Frutos secos</label>
+      <label class="filter-check"><input type="checkbox" data-allergen="soja"> Soja</label>
+
+      <div class="shopping-actions">
+        <button class="btn btn-ghost" id="clearDietBtn">Limpar filtros</button>
+        <button class="btn btn-primary" id="applyDietBtn">Aplicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: instruções de instalação iOS -->
+<div id="iosInstallModal" class="modal-backdrop hidden">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="iosInstallTitle">
+    <button class="modal-close" id="iosInstallClose" aria-label="Fechar">×</button>
+    <p class="section-title" style="margin-top:0;">Instalar no iPhone / iPad</p>
+    <ol class="steps-list">
+      <li>Toque no ícone de <strong>Partilhar</strong> na barra do Safari (o quadrado com a seta para cima).</li>
+      <li>Escolha <strong>"Adicionar ao Ecrã Principal"</strong>.</li>
+      <li>Confirme em <strong>"Adicionar"</strong> — o ícone aparece no ecrã principal como uma app normal.</li>
+    </ol>
+    <p class="modal-subtext">Nota: em iOS este passo só funciona no Safari, não noutros browsers.</p>
   </div>
 </div>
 

@@ -23,7 +23,13 @@ const state = {
   people: 3,
   batchDays: 2, // de quantos em quantos dias se cozinha
   selecting: false,
-  selections: new Set() // chaves "YYYY-MM-DD|lunch" ou "YYYY-MM-DD|dinner"
+  selections: new Set(), // chaves "YYYY-MM-DD|lunch" ou "YYYY-MM-DD|dinner"
+  diet: {
+    vegetarian: false,
+    semGluten: false,
+    semLactose: false,
+    alergias: new Set() // "ovo" | "peixe" | "marisco" | "frutos-secos" | "soja"
+  }
 };
 
 /* ---------------- utilidades de data ---------------- */
@@ -57,6 +63,30 @@ function batchIndexOf(d) {
   return Math.floor(diffDays / state.batchDays);
 }
 
+/* ---------------- filtros de dieta ---------------- */
+
+function passesFilters(item) {
+  const diet = state.diet;
+  if (diet.vegetarian && !item.vegetariano) return false;
+  if (diet.semGluten && item.alergenios.includes("gluten")) return false;
+  if (diet.semLactose && item.alergenios.includes("lactose")) return false;
+  for (const a of diet.alergias) {
+    if (item.alergenios.includes(a)) return false;
+  }
+  return true;
+}
+
+function hasActiveDietFilters() {
+  const diet = state.diet;
+  return diet.vegetarian || diet.semGluten || diet.semLactose || diet.alergias.size > 0;
+}
+
+function filteredList(list) {
+  if (!hasActiveDietFilters()) return list;
+  const f = list.filter(passesFilters);
+  return f.length > 0 ? f : list; // sem correspondências: mostra a lista completa em vez de falhar
+}
+
 /* ---------------- geração do menu ----------------
    Cada bloco de "batchDays" dias tem um índice único (b). Esse
    índice avança por uma sequência quase-prima diferente em cada
@@ -64,22 +94,29 @@ function batchIndexOf(d) {
    mudem todos ao mesmo ritmo — e o jantar usa um deslocamento de
    "metade do ciclo" em cada lista, para se distinguir bem do
    almoço mesmo quando as listas têm tamanhos diferentes.
+   Quando o prato principal já É uma salada (ehSalada), não se
+   junta o acompanhamento — fica só sopa + prato.
    -------------------------------------------------- */
 
 function getMealsForDate(d) {
   const b = batchIndexOf(d);
-  const { sopas, saladas, pratos } = RECIPES;
+  const sopas = filteredList(RECIPES.sopas);
+  const saladas = filteredList(RECIPES.saladas);
+  const pratos = filteredList(RECIPES.pratos);
   const half = (n) => Math.floor(n / 2) || 1;
+
+  const lunchPrato = pratos[mod(b * 5, pratos.length)];
+  const dinnerPrato = pratos[mod(b * 5 + half(pratos.length), pratos.length)];
 
   const lunch = {
     sopa: sopas[mod(b, sopas.length)],
-    salada: saladas[mod(b * 3, saladas.length)],
-    prato: pratos[mod(b * 5, pratos.length)]
+    salada: lunchPrato.ehSalada ? null : saladas[mod(b * 3, saladas.length)],
+    prato: lunchPrato
   };
   const dinner = {
     sopa: sopas[mod(b + half(sopas.length), sopas.length)],
-    salada: saladas[mod(b * 3 + half(saladas.length), saladas.length)],
-    prato: pratos[mod(b * 5 + half(pratos.length), pratos.length)]
+    salada: dinnerPrato.ehSalada ? null : saladas[mod(b * 3 + half(saladas.length), saladas.length)],
+    prato: dinnerPrato
   };
   return { lunch, dinner };
 }
@@ -339,11 +376,14 @@ function openMealModal(date, mealType, meal) {
   const dateStr = date.toLocaleDateString("pt-PT", { weekday: "long", day: "numeric", month: "long" });
   const mealLabel = mealType === "lunch" ? "Almoço" : "Jantar";
 
+  const saladaBlock = meal.salada
+    ? `<hr style="border:none;border-top:1px solid var(--line);margin:18px 0;">${courseBlockHTML("Acompanhamento", meal.salada)}`
+    : `<hr style="border:none;border-top:1px solid var(--line);margin:18px 0;"><p class="modal-subtext" style="margin:0;">Sem acompanhamento — o prato principal já inclui vegetais/salada.</p>`;
+
   body.innerHTML = `
     <p class="section-title" style="margin-top:0;text-transform:capitalize;">${mealLabel} · ${dateStr}</p>
     ${courseBlockHTML("Sopa", meal.sopa)}
-    <hr style="border:none;border-top:1px solid var(--line);margin:18px 0;">
-    ${courseBlockHTML("Salada", meal.salada)}
+    ${saladaBlock}
     <hr style="border:none;border-top:1px solid var(--line);margin:18px 0;">
     ${courseBlockHTML("Prato", meal.prato)}
   `;
@@ -377,7 +417,9 @@ function buildShoppingList() {
     const meal = getMealsForDate(date)[mealType];
 
     ["sopa","salada","prato"].forEach(course => {
-      meal[course].ingredientes.forEach(ing => {
+      const dish = meal[course];
+      if (!dish) return; // sem acompanhamento nesta refeição
+      dish.ingredientes.forEach(ing => {
         const k = ing.nome + "|" + ing.unidade;
         if (!merged[k]) merged[k] = { nome: ing.nome, unidade: ing.unidade, qtd: 0, hasQty: false };
         if (ing.qtd !== null) {
@@ -519,6 +561,9 @@ function bindEvents() {
   document.getElementById("selectWeekLunch").addEventListener("click", () => selectWholeWeek("lunch"));
   document.getElementById("selectWeekDinner").addEventListener("click", () => selectWholeWeek("dinner"));
 
+  bindDietEvents();
+  bindInstallEvents();
+
   document.getElementById("modalClose").addEventListener("click", () => {
     document.getElementById("mealModal").classList.add("hidden");
   });
@@ -541,6 +586,107 @@ function bindEvents() {
   });
 }
 
+/* ---------------- dieta e restrições ---------------- */
+
+function bindDietEvents() {
+  const modal = document.getElementById("dietModal");
+  const vegEl = document.getElementById("filterVegetarian");
+  const glutenEl = document.getElementById("filterSemGluten");
+  const lactoseEl = document.getElementById("filterSemLactose");
+  const allergenEls = Array.from(document.querySelectorAll("[data-allergen]"));
+
+  document.getElementById("dietBtn").addEventListener("click", () => modal.classList.remove("hidden"));
+  document.getElementById("dietClose").addEventListener("click", () => modal.classList.add("hidden"));
+  modal.addEventListener("click", (e) => { if (e.target === modal) modal.classList.add("hidden"); });
+
+  document.getElementById("applyDietBtn").addEventListener("click", () => {
+    state.diet.vegetarian = vegEl.checked;
+    state.diet.semGluten = glutenEl.checked;
+    state.diet.semLactose = lactoseEl.checked;
+    state.diet.alergias = new Set(allergenEls.filter(el => el.checked).map(el => el.dataset.allergen));
+    updateDietButtonLabel();
+    modal.classList.add("hidden");
+    renderAll();
+  });
+
+  document.getElementById("clearDietBtn").addEventListener("click", () => {
+    vegEl.checked = false;
+    glutenEl.checked = false;
+    lactoseEl.checked = false;
+    allergenEls.forEach(el => { el.checked = false; });
+    state.diet = { vegetarian: false, semGluten: false, semLactose: false, alergias: new Set() };
+    updateDietButtonLabel();
+    renderAll();
+  });
+}
+
+function updateDietButtonLabel() {
+  const btn = document.getElementById("dietBtn");
+  const diet = state.diet;
+  const count = (diet.vegetarian ? 1 : 0) + (diet.semGluten ? 1 : 0) + (diet.semLactose ? 1 : 0) + diet.alergias.size;
+  btn.innerHTML = count > 0
+    ? `Dieta e restrições<span class="filter-badge">${count}</span>`
+    : "Dieta e restrições";
+  btn.classList.toggle("active", count > 0);
+}
+
+/* ---------------- instalação PWA ---------------- */
+
+let deferredInstallPrompt = null;
+
+function isStandalone() {
+  return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+}
+
+function isIOS() {
+  return /iphone|ipad|ipod/i.test(navigator.userAgent);
+}
+
+function bindInstallEvents() {
+  const installBtn = document.getElementById("installBtn");
+
+  if (isStandalone()) return; // já instalada, não mostrar botão
+
+  if (isIOS()) {
+    installBtn.classList.remove("hidden");
+    installBtn.textContent = "Instalar app";
+    installBtn.addEventListener("click", () => {
+      document.getElementById("iosInstallModal").classList.remove("hidden");
+    });
+  } else {
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      installBtn.classList.remove("hidden");
+    });
+    installBtn.addEventListener("click", async () => {
+      if (!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      installBtn.classList.add("hidden");
+    });
+    window.addEventListener("appinstalled", () => installBtn.classList.add("hidden"));
+  }
+
+  document.getElementById("iosInstallClose").addEventListener("click", () => {
+    document.getElementById("iosInstallModal").classList.add("hidden");
+  });
+  document.getElementById("iosInstallModal").addEventListener("click", (e) => {
+    if (e.target.id === "iosInstallModal") e.currentTarget.classList.add("hidden");
+  });
+}
+
+function registerServiceWorker() {
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").catch(() => {
+        /* falha silenciosa: a app continua a funcionar sem cache offline */
+      });
+    });
+  }
+}
+
 /* ---------------- arranque ---------------- */
 
 async function init() {
@@ -558,6 +704,7 @@ async function init() {
   }
   bindEvents();
   updateWeekHint();
+  registerServiceWorker();
   renderAll();
 }
 

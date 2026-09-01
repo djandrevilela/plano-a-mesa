@@ -145,6 +145,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 .btn-primary { background: var(--ochre); color: #fff; }
 .btn-primary:hover { background: #a9682f; }
+.btn.hidden { display: none; }
 
 .btn-ghost { background: transparent; border-color: var(--line); color: var(--ink-soft); }
 
@@ -425,17 +426,108 @@ body.selecting .select-checkbox { display: inline-block; }
 
 .shopping-actions { display: flex; gap: 10px; margin-top: 18px; }
 
+/* ---------- Filtros de dieta ---------- */
+.modal-subtext { font-size: 0.85rem; color: var(--ink-soft); margin: -6px 0 18px; line-height: 1.45; }
+
+.filter-group-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ochre);
+  margin: 18px 0 8px;
+}
+.filter-group-label:first-of-type { margin-top: 0; }
+
+.filter-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 4px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+}
+.filter-check input {
+  width: 19px;
+  height: 19px;
+  accent-color: var(--leaf);
+  flex-shrink: 0;
+}
+
+.filter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--ochre);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {
-  .calendar-grid, .weekday-row, .week-columns { grid-template-columns: repeat(7, 1fr); gap: 4px; }
-  .day-cell { min-height: 92px; padding: 5px; font-size: 0.72rem; }
-  .day-meal { font-size: 0.62rem; padding: 3px 4px; }
+  .calendar-grid, .weekday-row { grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .day-cell { min-height: 86px; padding: 4px; font-size: 0.72rem; }
+  .day-meal { font-size: 0.6rem; padding: 4px; min-height: 30px; }
   .day-meal .tag-label { display: none; }
-  .weekday-row { font-size: 0.62rem; }
-  .month-jump { position: static; margin-top: 10px; }
+  .weekday-row { font-size: 0.6rem; }
+  .month-jump { position: static; margin-top: 10px; justify-content: center; }
   .month-nav { flex-wrap: wrap; }
-  .week-columns { grid-template-columns: repeat(2, 1fr); }
-  .topbar { flex-direction: column; align-items: flex-start; }
+  .topbar { flex-direction: column; align-items: stretch; gap: 12px; }
+  .topbar-controls { justify-content: space-between; }
+  .brand { justify-content: center; text-align: center; }
+
+  /* Semana: scroll horizontal com snap em vez de grelha apertada */
+  .week-columns {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .week-col { min-width: 160px; flex: 0 0 auto; scroll-snap-align: start; }
+  .week-quick-actions { flex-direction: column; align-items: stretch; }
+  .week-quick-actions .btn { width: 100%; }
+
+  /* Modais como "bottom sheet" no telemóvel */
+  .modal-backdrop { align-items: flex-end; padding: 0; }
+  .modal {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 18px 18px 0 0;
+    max-height: 88vh;
+    padding: 24px 20px calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .selection-bar {
+    left: 12px;
+    right: 12px;
+    transform: none;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* Alvos de toque maiores */
+  .nav-arrow { width: 44px; height: 44px; }
+  .view-btn, .btn { padding: 11px 18px; }
+}
+
+@media (max-width: 420px) {
+  .day-cell { min-height: 74px; }
+  .brand-text h1 { font-size: 1.25rem; }
+}
+
+@supports (padding: max(0px)) {
+  .topbar { padding-top: max(20px, env(safe-area-inset-top)); }
+  body { padding-bottom: env(safe-area-inset-bottom); }
 }
 
 @media (prefers-reduced-motion: reduce) {
